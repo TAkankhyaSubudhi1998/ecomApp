@@ -1,0 +1,33 @@
+<mat-card *ngIf="!loading; else loader" class="product-detail-card">
+    <div class="product-container">
+        <div class="image-section">
+            <img [src]="product.image" alt="{{ product.title }}" />
+        </div>
+        <div class="info-section">
+            <h2>{{ product.title }}</h2>
+            <h3>₹{{ product.price }}</h3>
+            <p>{{ product.description }}</p>
+            <p><strong>Category:</strong> {{ product.category }}</p>
+            <p><strong>Rating:</strong> {{ product.rating?.rate }} ({{ product.rating?.count }} reviews)</p>
+            <div>
+                <div *ngIf="quantity > 0; else addCart">
+                    <button mat-mini-button color="primary" (click)="removeFromCart(product.id)">−</button>
+                    <span style="margin: 0 1rem;">{{ quantity }}</span>
+                    <button mat-mini-button color="primary" (click)="addToCart(product)">+</button>
+                </div>
+
+                <ng-template #addCart>
+                    <button mat-flat-button color="primary" (click)="addToCart(product)">
+                        Add to Cart
+                    </button>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</mat-card>
+
+<ng-template #loader>
+  <div class="loader-wrapper">
+    <mat-spinner color="primary"></mat-spinner>
+  </div>
+</ng-template>

@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Global overrides (optional) */
+:root {
+  --primary-color: #9c27b0; /* Magenta/Violet */
+  --accent-color: #e91e63;
+  --warn-color: #f44336;
+}
+
+/* Custom header example using theme colors */
+.mat-toolbar.mat-primary {
+  background-color: var(--primary-color) !important;
+  color: white;
+}
+
+.mat-badge-content {
+  background-color: var(--accent-color);
+}
+
+button.mat-icon-button:hover {
+  background-color: rgba(156, 39, 176, 0.1); /* light magenta */
+}
+
+mat-card {
+  background-color: white !important;
+  color: #333;
+}
+
+.mdc-floating-label{
+    color: var(--primary-color) !important;
+}
+
+.mat-form-field{
+    background-color: white;
+}
+
+.blank-page{
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}

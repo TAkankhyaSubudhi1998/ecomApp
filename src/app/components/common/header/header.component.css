@@ -1,0 +1,12 @@
+.header{
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+}
+.app-title {
+    font-weight: bold;
+    cursor: pointer;
+}
+.spacer {
+    flex: 1 1 auto;
+}
