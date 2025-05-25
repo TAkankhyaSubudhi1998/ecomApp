@@ -22,7 +22,6 @@ export class CartComponent implements OnInit {
   private breakpointObserver = inject(BreakpointObserver);
 
   ngOnInit(): void {
-    // this.onResize();
     this.loadCart();
     this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
       this.isMobile = result.matches;

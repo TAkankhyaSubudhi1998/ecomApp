@@ -43,10 +43,6 @@ export class ProductListComponent implements OnInit {
       distinctUntilChanged()
     ).subscribe((searchText: any) => {
       this.filterProducts();
-      // const lowerSearch = (searchText || '').toLowerCase();
-      // this.products = this.OriginalProductsList.filter((product: any) =>
-      //   product.title.toLowerCase().includes(lowerSearch)
-      // );
     });
 
     this.categoryControl.valueChanges.subscribe(() => this.filterProducts());

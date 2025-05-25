@@ -13,7 +13,6 @@ export class CartService {
 
 
   constructor() {
-    // this.updateItemCount();
     this.updateUniqueItemCount();
   }
 
@@ -21,11 +20,6 @@ export class CartService {
     const uniqueCount = this.items.length;
     this.uniqueItemCountSubject.next(uniqueCount);
   }
-
-  // private updateItemCount() {
-  //   const total = this.items.reduce((sum, item) => sum + item.quantity, 0);
-  //   this.itemCountSubject.next(total);
-  // }
 
   addToCart(product: any) {
     const found = this.items.find(i => i.product.id === product.id);

@@ -55,7 +55,6 @@ mat-card-content {
     flex-grow: 1;
 }
 
-/* Align button to bottom */
 mat-card-actions {
     margin-top: auto;
 }
@@ -65,7 +64,7 @@ mat-card-actions {
     padding: 0.7rem;
     border: 2px solid var(--primary-color);
     border-radius: 20px;
-    color: var(--primary-color);
+    color: var(--primary-coloFr);
     outline: none;
     margin-right: 5px;
 }
