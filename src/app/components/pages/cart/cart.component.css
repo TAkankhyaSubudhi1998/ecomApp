@@ -55,7 +55,7 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
-.cart-mobile, .cart-mobile-card {
+.cart-mobile, .cart-mobile-card, .cart-desktop {
     padding: 1rem;
     margin-bottom: 1rem;
 }
